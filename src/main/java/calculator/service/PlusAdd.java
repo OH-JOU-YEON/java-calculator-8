@@ -9,7 +9,7 @@ public class PlusAdd {
             long temp = Long.parseLong(s);
             //입력이 음수인지 검사
             if(temp<0) {
-                throw new IllegalArgumentException("잘못된 입력입니다");
+                throw new IllegalArgumentException("음수가 발견되었습니다.");
             }
 
             sum += temp;

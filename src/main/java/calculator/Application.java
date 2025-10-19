@@ -14,11 +14,11 @@ public class Application {
 
            String input = readLine();
 
-            if(StringCheck.checkString(input)) {
+            if(!StringCheck.checkString(input)) {
                throw new IllegalArgumentException("잘못된 입력입니다");
            }
 
-           String[] stringCut = StringCut.StringCut(input);
+           String[] stringCut = StringCut.stringCut(input);
 
             long result = PlusAdd.inputAdd(stringCut);
 
