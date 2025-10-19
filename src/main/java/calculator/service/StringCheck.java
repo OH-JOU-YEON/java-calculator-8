@@ -5,6 +5,8 @@ public class StringCheck {
 
     public static final String delimiter = "//(.)\\\\n(.*)";
 
+    public static final String[] metaString ={"$","^","]","[","*","(",")","?","\\",".","|","}","{"};  ;
+
 
     public static boolean checkString(String input) {
 
@@ -14,8 +16,13 @@ public class StringCheck {
 
             String[] tokens = input.split("//|\\\\n");
 
-            String regex = "(^\\d)" + "(" + tokens[1] + "\\d)*(^\\d)?";
+            //정규식에 사용되는 메타문자를 구분자로 받았는지 검사
+            for(String s : metaString) {
+                if(tokens[1].equals(s))
+                    tokens[1] = "\\" +  tokens[1];
+            }
 
+            String regex = "(^\\d)" + "(" + tokens[1] + "\\d)*(^\\d)?";
 
             String replaceDeli = input.replace("//" + tokens[1] + "\\n","");
 
