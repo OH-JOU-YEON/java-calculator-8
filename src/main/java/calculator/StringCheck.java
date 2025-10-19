@@ -1,11 +1,36 @@
 package calculator;
 
+
+
 public class StringCheck {
 
     public static boolean checkString(String input) {
 
-       //문자열을 받아 검사하고 구분자를 뽑는 메서드
+       //문자열을 받아 검사하는 메서드
 
-        return false;
+        if(input.matches("//(.)\\\\n(.*)")) {
+
+            String[] tokens = input.split("//|\\\\n");
+            String regex = "(\\d" + tokens[1] + ")+\\d";
+
+
+           String replaceDeli = input.replace("//" + tokens[1] + "\\n","");
+
+
+
+            return replaceDeli.matches(regex);
+
+
+        }else {
+            return input.matches("(\\d[,:])+\\d?");
+        }
+
+
     }
+
+
+
+
+
+
 }
