@@ -1,6 +1,8 @@
 package calculator;
 
+import calculator.service.InputAdd;
 import calculator.service.StringCheck;
+import calculator.service.StringCut;
 
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
@@ -16,10 +18,15 @@ public class Application {
                throw new IllegalArgumentException("잘못된 입력입니다");
            }
 
+           String[] stringCut = StringCut.StringCut(input);
+
+            long result = InputAdd.inputAdd(stringCut);
+
        } catch (IllegalArgumentException e) {
            System.out.println("에러메세지:" + e.getMessage());
 
        }
+
 
 
 
