@@ -8,7 +8,7 @@ public class StringCheck {
 
     public static boolean checkString(String input) {
 
-       //문자열을 받아 검사하는 메서드
+        //문자열을 받아 형식을 검사하는 메서드
 
         if(input.matches(delimiter)) {
 
@@ -16,7 +16,7 @@ public class StringCheck {
             String regex = "(\\d" + tokens[1] + ")+\\d";
 
 
-           String replaceDeli = input.replace("//" + tokens[1] + "\\n","");
+            String replaceDeli = input.replace("//" + tokens[1] + "\\n","");
 
 
 

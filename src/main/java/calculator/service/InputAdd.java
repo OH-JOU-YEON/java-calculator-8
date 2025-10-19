@@ -6,7 +6,13 @@ public class InputAdd {
 
         long sum = 0;
         for (String s : input) {
-            sum += Long.parseLong(s);
+            long temp = Long.parseLong(s);
+            //입력이 음수인지 검사
+            if(temp<0) {
+                throw new IllegalArgumentException("잘못된 입력입니다");
+            }
+
+            sum += temp;
         }
 
         return sum;

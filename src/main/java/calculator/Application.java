@@ -11,10 +11,10 @@ public class Application {
 
         System.out.println("덧셈할 문자열을 입력해 주세요.");
 
-       try {
+
            String input = readLine();
 
-            if(!StringCheck.checkString(input)) {
+            if(StringCheck.checkString(input)) {
                throw new IllegalArgumentException("잘못된 입력입니다");
            }
 
@@ -22,12 +22,9 @@ public class Application {
 
             long result = InputAdd.inputAdd(stringCut);
 
-            System.out.println("결과 : " + result);
+            System.out.print("결과 : " + result);
 
-       } catch (IllegalArgumentException e) {
-           System.out.println("에러메세지:" + e.getMessage());
 
-       }
 
 
 
