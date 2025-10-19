@@ -1,5 +1,7 @@
 package calculator;
 
+import calculator.service.StringCheck;
+
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
 public class Application {
