@@ -1,6 +1,6 @@
 package calculator;
 
-import calculator.service.InputAdd;
+import calculator.service.PlusAdd;
 import calculator.service.StringCheck;
 import calculator.service.StringCut;
 
@@ -20,7 +20,7 @@ public class Application {
 
            String[] stringCut = StringCut.StringCut(input);
 
-            long result = InputAdd.inputAdd(stringCut);
+            long result = PlusAdd.inputAdd(stringCut);
 
             System.out.print("결과 : " + result);
 

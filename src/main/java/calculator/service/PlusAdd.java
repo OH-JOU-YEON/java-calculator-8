@@ -1,6 +1,6 @@
 package calculator.service;
 
-public class InputAdd {
+public class PlusAdd {
 
     public static long inputAdd(String[] input) {
 
