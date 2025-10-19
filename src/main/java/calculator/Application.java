@@ -22,6 +22,8 @@ public class Application {
 
             long result = InputAdd.inputAdd(stringCut);
 
+            System.out.println("결과 : " + result);
+
        } catch (IllegalArgumentException e) {
            System.out.println("에러메세지:" + e.getMessage());
 
